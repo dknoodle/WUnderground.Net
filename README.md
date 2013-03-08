@@ -5,6 +5,6 @@ This library implements the forecast features of the Wunderground.com Weather AP
 
 http://www.wunderground.com/weather/api
 
-NuGet.org Download:
+NuGet Package:
 -------------------
 https://nuget.org/packages/WUnderground.Net
