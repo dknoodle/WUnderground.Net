@@ -54,6 +54,7 @@
     <Compile Include="Models\ForecastDay.cs" />
     <Compile Include="Models\ForecastHourly.cs" />
     <Compile Include="Models\ForecastHourlyData.cs" />
+    <Compile Include="Models\WeatherHistory.cs" />
     <Compile Include="Models\Response.cs" />
     <Compile Include="Models\SimpleForecast.cs" />
     <Compile Include="Models\TemperatureCF.cs" />
