@@ -58,6 +58,14 @@ namespace CGurus.Weather.WundergroundAPI
             return RestRequest.Execute<ForecastHourlyData>(uri);
         }
 
+        public WeatherHistory GetHistoryUS(string State, string City, DateTime date) {
+            ValidateState(State);
+
+            //Example: http://api.wunderground.com/api/{API_Key}/history_{Date}/q/CA/San_Francisco.json
+            string uri = string.Format("{0}/{1}/history_{2}/q/{3}/{4}.json", _baseUrl, _apiKey, date.ToString("yyyyMMdd"), State, City.Replace(" ", "_"));
+
+            return RestRequest.Execute<WeatherHistory>(uri);
+        }
 
         private void ValidateState(string State)
         {

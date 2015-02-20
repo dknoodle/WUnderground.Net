@@ -17,6 +17,7 @@ namespace TestConsole
             var forecast = wApi.GetForecastUS("CA", "San Francisco");
             var forecast10Day = wApi.GetForecast10DayUS("CA", "San Francisco");
             var forecastHourlyUS = wApi.GetForecastHourlyUS("CA", "San Francisco");
+            var historyUS = wApi.GetHistoryUS("CA", "San Francisco", DateTime.Parse("2010-06-01"));
             
             Console.ReadLine();
 
