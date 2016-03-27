@@ -15,21 +15,18 @@ namespace CGurus.Weather.WundergroundAPI.Utilities
             RestSharp.IRestRequest request = new RestSharp.RestRequest();
 
             var client = new RestClient();
+            var jsonDeserializer = new JsonDeserializer();
+            jsonDeserializer.JsonConverters = new JsonConverter[] { new Utilities.BoolConverter(), new Utilities.DoubleConverter() };
+            client.AddHandler("application/json", jsonDeserializer);
+
             client.BaseUrl = Uri;
             var response = client.Execute<T>(request);
 
             if (response.ErrorException != null)
             {
-                if (response.Content.Length > 0)
-                {
-                    return JsonConvert.DeserializeObject<T>(response.Content, new Utilities.BoolConverter(), new Utilities.DoubleConverter());
-                }
-                else
-                {
-                    throw response.ErrorException;
-                }
+                throw response.ErrorException;
             }
-            
+
             return response.Data;
         }
     }

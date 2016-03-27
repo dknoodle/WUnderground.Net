@@ -64,6 +64,7 @@
     <Compile Include="Models\Enums.cs" />
     <Compile Include="Models\SimpleForecastDay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\JsonDeserializer.cs" />
     <Compile Include="Utilities\RestRequest.cs" />
     <Compile Include="Utilities\BoolConverter.cs" />
     <Compile Include="Utilities\DoubleConverter.cs" />
