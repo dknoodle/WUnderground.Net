@@ -20,16 +20,14 @@ namespace CGurus.Weather.WundergroundAPI.Utilities
 
             if (response.ErrorException != null)
             {
-                if (response.Content.Length > 0)
-                {
-                    return JsonConvert.DeserializeObject<T>(response.Content, new Utilities.BoolConverter(), new Utilities.DoubleConverter());
-                }
-                else
-                {
-                    throw response.ErrorException;
-                }
+                throw response.ErrorException;
             }
-            
+
+            if (response.Content.Length > 0)
+            {
+                return JsonConvert.DeserializeObject<T>(response.Content, new Utilities.BoolConverter(), new Utilities.DoubleConverter());
+            }
+
             return response.Data;
         }
     }
