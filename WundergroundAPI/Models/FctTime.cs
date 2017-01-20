@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CGurus.Weather.WundergroundAPI.Models
+namespace CreativeGurus.Weather.Wunderground.Models
 {
     public class FctTime
     {
@@ -34,5 +34,6 @@ namespace CGurus.Weather.WundergroundAPI.Models
         public string Weekday_Name_UnLang { get; set; }
         public Int16? YDay { get; set; }
         public Int16? Year { get; set; }
+        public DateTime UTCDate { get; set; }
     }
 }

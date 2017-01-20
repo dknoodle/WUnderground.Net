@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CGurus.Weather.WundergroundAPI.Utilities
+namespace CreativeGurus.Weather.Wunderground.Utilities
 {
     internal class EpochConverter
     {

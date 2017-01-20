@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CGurus.Weather.WundergroundAPI.Models
+namespace CreativeGurus.Weather.Wunderground.Models
 {
     public class ForecastData
     {
