@@ -50,8 +50,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WundergroundAPI\CreativeGurus.Weather.Wunderground.csproj">
-      <Project>{2530CF11-EAFA-4B60-B151-D0A056C846B2}</Project>
+    <ProjectReference Include="..\CreativeGurus.Weather.Wunderground\CreativeGurus.Weather.Wunderground.csproj">
+      <Project>{2530cf11-eafa-4b60-b151-d0a056c846b2}</Project>
       <Name>CreativeGurus.Weather.Wunderground</Name>
     </ProjectReference>
   </ItemGroup>
