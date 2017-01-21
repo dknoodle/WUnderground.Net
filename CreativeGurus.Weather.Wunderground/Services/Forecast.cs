@@ -1,9 +1,6 @@
 ﻿using CreativeGurus.Weather.Wunderground.Models;
 using CreativeGurus.Weather.Wunderground.Utilities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CreativeGurus.Weather.Wunderground.Services
@@ -82,6 +79,5 @@ namespace CreativeGurus.Weather.Wunderground.Services
 
             return await RestRequest.ExecuteAsync<ForecastData>(new Uri(uri)).ConfigureAwait(false);
         }
-
     }
 }

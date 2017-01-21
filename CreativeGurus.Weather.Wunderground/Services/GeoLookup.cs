@@ -1,9 +1,6 @@
 ﻿using CreativeGurus.Weather.Wunderground.Models;
 using CreativeGurus.Weather.Wunderground.Utilities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace CreativeGurus.Weather.Wunderground.Services
@@ -12,6 +9,7 @@ namespace CreativeGurus.Weather.Wunderground.Services
     {
         private string _apiKey;
         private string _baseUrl;
+
         internal GeoLookup(string apiKey, string baseUrl)
         {
             this._apiKey = apiKey;
@@ -105,6 +103,7 @@ namespace CreativeGurus.Weather.Wunderground.Services
 
             return await RestRequest.ExecuteAsync<GeoLookupData>(new Uri(uri)).ConfigureAwait(false);
         }
+
         public GeoLookupData GeoLookupUSZipCode(string zipCode)
         {
             string uri = string.Format("{0}/{1}/geolookup/q/{2}.json", _baseUrl, _apiKey, zipCode);

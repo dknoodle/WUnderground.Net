@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CreativeGurus.Weather.Wunderground.Models;
-using CreativeGurus.Weather.Wunderground.Utilities;
-using CreativeGurus.Weather.Wunderground.Services;
+﻿using CreativeGurus.Weather.Wunderground.Services;
 
 namespace CreativeGurus.Weather.Wunderground
 {

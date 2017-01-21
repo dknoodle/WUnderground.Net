@@ -1,9 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CreativeGurus.Weather.Wunderground.Utilities
 {
@@ -11,7 +7,6 @@ namespace CreativeGurus.Weather.Wunderground.Utilities
     {
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-
             writer.WriteValue(string.IsNullOrWhiteSpace(value.ToString()) ? (double?)null : (double)value);
         }
 
