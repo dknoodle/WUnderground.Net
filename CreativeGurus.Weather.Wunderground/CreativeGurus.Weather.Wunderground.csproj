@@ -81,12 +81,6 @@
     <Compile Include="Models\SimpleForecastDay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service.cs" />
-    <Compile Include="Services\Alerts.cs" />
-    <Compile Include="Services\Almanac.cs" />
-    <Compile Include="Services\Astronomy.cs" />
-    <Compile Include="Services\Forecast.cs" />
-    <Compile Include="Services\GeoLookup.cs" />
-    <Compile Include="Services\Hourly.cs" />
     <Compile Include="Utilities\RestRequest.cs" />
     <Compile Include="Utilities\BoolConverter.cs" />
     <Compile Include="Utilities\DoubleConverter.cs" />

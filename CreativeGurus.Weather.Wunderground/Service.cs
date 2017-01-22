@@ -25,6 +25,12 @@ namespace CreativeGurus.Weather.Wunderground
             return RestRequest.Execute<T>(new Uri(url));
         }
 
+        internal async Task<T> GetDataAsync(Service service, LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
+        {
+            string url = GetUrl(service: service, lookupType: lookupType, city: city, state: state, country: country, id: id, latitude: latitude, longitude: longitude, language: language, usePWS: usePWS, useBestFct: useBestFct, ipAddress: ipAddress);
+            return await RestRequest.ExecuteAsync<T>(new Uri(url)).ConfigureAwait(false);
+        }
+
         private string GetUrl(Service service, LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
         {
             StringBuilder sb = new StringBuilder();
