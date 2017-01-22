@@ -1,8 +1,8 @@
 ﻿namespace CreativeGurus.Weather.Wunderground.Models
 {
-    public class AstronomyData
+    public class GeoLookupResponse
     {
-        public MoonPhase MoonPhase { get; set; }
         public Response Response { get; set; }
+        public Location Location { get; set; }
     }
 }

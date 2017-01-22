@@ -1,88 +1,101 @@
 ﻿using CreativeGurus.Weather.Wunderground.Models;
+
 using System.Threading.Tasks;
 
 namespace CreativeGurus.Weather.Wunderground
 {
-    public class WeatherClient
-    {
-        private const string _baseUrl = "http://api.wunderground.com/api";
-        private string _apiKey;
+	public class WeatherClient
+	{
+		private const string _baseUrl = "http://api.wunderground.com/api";
+		private string _apiKey;
 
-        public WeatherClient(string apiKey)
-        {
-            _apiKey = apiKey;
-        }
+		public WeatherClient(string apiKey)
+		{
+			_apiKey = apiKey;
+		}
 
-        public AlertData GetAlerts(LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
-        {
-            Service<AlertData> forecast = new Service<AlertData>(_apiKey, _baseUrl);
-            return forecast.GetData(service: Service.Alerts, lookupType: lookupType, city: city, state: state, country: country, id: id, latitude: latitude, longitude: longitude, language: language, usePWS: usePWS, useBestFct: useBestFct, ipAddress: ipAddress);
-        }
+		public AlertResponse GetAlerts(QueryType queryType, QueryOptions options = null)
+		{
+			Service<AlertResponse> forecast = new Service<AlertResponse>(_apiKey, _baseUrl);
+			return forecast.GetData(Feature.Alerts, queryType, options);
+		}
 
-        public async Task<AlertData> GetAlertsAsync(LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
-        {
-            Service<AlertData> forecast = new Service<AlertData>(_apiKey, _baseUrl);
-            return await forecast.GetDataAsync(service: Service.Alerts, lookupType: lookupType, city: city, state: state, country: country, id: id, latitude: latitude, longitude: longitude, language: language, usePWS: usePWS, useBestFct: useBestFct, ipAddress: ipAddress).ConfigureAwait(false);
-        }
+		public async Task<AlertResponse> GetAlertsAsync(QueryType queryType, QueryOptions options = null)
+		{
+			Service<AlertResponse> forecast = new Service<AlertResponse>(_apiKey, _baseUrl);
+			return await forecast.GetDataAsync(Feature.Alerts, queryType, options).ConfigureAwait(false);
+		}
 
-        public AlmanacData GetAlmanac(LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
-        {
-            Service<AlmanacData> forecast = new Service<AlmanacData>(_apiKey, _baseUrl);
-            return forecast.GetData(service: Service.Almanac, lookupType: lookupType, city: city, state: state, country: country, id: id, latitude: latitude, longitude: longitude, language: language, usePWS: usePWS, useBestFct: useBestFct, ipAddress: ipAddress);
-        }
+		public AlmanacResponse GetAlmanac(QueryType queryType, QueryOptions options = null)
+		{
+			Service<AlmanacResponse> forecast = new Service<AlmanacResponse>(_apiKey, _baseUrl);
+			return forecast.GetData(Feature.Almanac, queryType, options);
+		}
 
-        public async Task<AlmanacData> GetAlmanacAsync(LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
-        {
-            Service<AlmanacData> forecast = new Service<AlmanacData>(_apiKey, _baseUrl);
-            return await forecast.GetDataAsync(service: Service.Almanac, lookupType: lookupType, city: city, state: state, country: country, id: id, latitude: latitude, longitude: longitude, language: language, usePWS: usePWS, useBestFct: useBestFct, ipAddress: ipAddress).ConfigureAwait(false);
-        }
+		public async Task<AlmanacResponse> GetAlmanacAsync(QueryType queryType, QueryOptions options = null)
+		{
+			Service<AlmanacResponse> forecast = new Service<AlmanacResponse>(_apiKey, _baseUrl);
+			return await forecast.GetDataAsync(Feature.Almanac, queryType, options).ConfigureAwait(false);
+		}
 
-        public AstronomyData GetAstronomy(LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
-        {
-            Service<AstronomyData> forecast = new Service<AstronomyData>(_apiKey, _baseUrl);
-            return forecast.GetData(service: Service.Astronomy, lookupType: lookupType, city: city, state: state, country: country, id: id, latitude: latitude, longitude: longitude, language: language, usePWS: usePWS, useBestFct: useBestFct, ipAddress: ipAddress);
-        }
+		public AstronomyResponse GetAstronomy(QueryType queryType, QueryOptions options = null)
+		{
+			Service<AstronomyResponse> forecast = new Service<AstronomyResponse>(_apiKey, _baseUrl);
+			return forecast.GetData(Feature.Astronomy, queryType, options);
+		}
 
-        public async Task<AstronomyData> GetAstronomyAsync(LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
-        {
-            Service<AstronomyData> forecast = new Service<AstronomyData>(_apiKey, _baseUrl);
-            return await forecast.GetDataAsync(service: Service.Astronomy, lookupType: lookupType, city: city, state: state, country: country, id: id, latitude: latitude, longitude: longitude, language: language, usePWS: usePWS, useBestFct: useBestFct, ipAddress: ipAddress).ConfigureAwait(false);
-        }
+		public async Task<AstronomyResponse> GetAstronomyAsync(QueryType queryType, QueryOptions options = null)
+		{
+			Service<AstronomyResponse> forecast = new Service<AstronomyResponse>(_apiKey, _baseUrl);
+			return await forecast.GetDataAsync(Feature.Astronomy, queryType, options).ConfigureAwait(false);
+		}
 
-        public ForecastData GetForecast(LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
-        {
-            Service<ForecastData> forecast = new Service<ForecastData>(_apiKey, _baseUrl);
-            return forecast.GetData(service: Service.Forecast, lookupType: lookupType, city: city, state: state, country: country, id: id, latitude: latitude, longitude: longitude, language: language, usePWS: usePWS, useBestFct: useBestFct, ipAddress: ipAddress);
-        }
+		public ForecastResponse GetForecast(QueryType queryType, QueryOptions options = null)
+		{
+			Service<ForecastResponse> forecast = new Service<ForecastResponse>(_apiKey, _baseUrl);
+			return forecast.GetData(Feature.Forecast, queryType, options);
+		}
 
-        public async Task<ForecastData> GetForecastAsync(LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
-        {
-            Service<ForecastData> forecast = new Service<ForecastData>(_apiKey, _baseUrl);
-            return await forecast.GetDataAsync(service: Service.Forecast, lookupType: lookupType, city: city, state: state, country: country, id: id, latitude: latitude, longitude: longitude, language: language, usePWS: usePWS, useBestFct: useBestFct, ipAddress: ipAddress).ConfigureAwait(false);
-        }
+		public async Task<ForecastResponse> GetForecastAsync(QueryType queryType, QueryOptions options = null)
+		{
+			Service<ForecastResponse> forecast = new Service<ForecastResponse>(_apiKey, _baseUrl);
+			return await forecast.GetDataAsync(Feature.Forecast, queryType, options).ConfigureAwait(false);
+		}
 
-        public GeoLookupData GetGeoLookup(LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
-        {
-            Service<GeoLookupData> forecast = new Service<GeoLookupData>(_apiKey, _baseUrl);
-            return forecast.GetData(service: Service.GeoLookup, lookupType: lookupType, city: city, state: state, country: country, id: id, latitude: latitude, longitude: longitude, language: language, usePWS: usePWS, useBestFct: useBestFct, ipAddress: ipAddress);
-        }
+		public GeoLookupResponse GetGeoLookup(QueryType queryType, QueryOptions options = null)
+		{
+			Service<GeoLookupResponse> forecast = new Service<GeoLookupResponse>(_apiKey, _baseUrl);
+			return forecast.GetData(Feature.GeoLookup, queryType, options);
+		}
 
-        public async Task<GeoLookupData> GetGeoLookupAsync(LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
-        {
-            Service<GeoLookupData> forecast = new Service<GeoLookupData>(_apiKey, _baseUrl);
-            return await forecast.GetDataAsync(service: Service.GeoLookup, lookupType: lookupType, city: city, state: state, country: country, id: id, latitude: latitude, longitude: longitude, language: language, usePWS: usePWS, useBestFct: useBestFct, ipAddress: ipAddress).ConfigureAwait(false);
-        }
+		public async Task<GeoLookupResponse> GetGeoLookupAsync(QueryType queryType, QueryOptions options = null)
+		{
+			Service<GeoLookupResponse> forecast = new Service<GeoLookupResponse>(_apiKey, _baseUrl);
+			return await forecast.GetDataAsync(Feature.GeoLookup, queryType, options).ConfigureAwait(false);
+		}
 
-        public HourlyData GetHourly(LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
-        {
-            Service<HourlyData> forecast = new Service<HourlyData>(_apiKey, _baseUrl);
-            return forecast.GetData(service: Service.Hourly, lookupType: lookupType, city: city, state: state, country: country, id: id, latitude: latitude, longitude: longitude, language: language, usePWS: usePWS, useBestFct: useBestFct, ipAddress: ipAddress);
-        }
+		public HourlyResponse GetHourly(QueryType queryType, QueryOptions options = null)
+		{
+			Service<HourlyResponse> forecast = new Service<HourlyResponse>(_apiKey, _baseUrl);
+			return forecast.GetData(Feature.Hourly, queryType, options);
+		}
 
-        public async Task<HourlyData> GetHourlyAsync(LookupType lookupType, string city = "", string state = "", string country = "", string id = "", string latitude = "", string longitude = "", string language = "", bool? usePWS = null, bool? useBestFct = null, string ipAddress = "")
-        {
-            Service<HourlyData> forecast = new Service<HourlyData>(_apiKey, _baseUrl);
-            return await forecast.GetDataAsync(service: Service.Hourly, lookupType: lookupType, city: city, state: state, country: country, id: id, latitude: latitude, longitude: longitude, language: language, usePWS: usePWS, useBestFct: useBestFct, ipAddress: ipAddress).ConfigureAwait(false);
-        }
-    }
+		public async Task<HourlyResponse> GetHourlyAsync(QueryType queryType, QueryOptions options = null)
+		{
+			Service<HourlyResponse> forecast = new Service<HourlyResponse>(_apiKey, _baseUrl);
+			return await forecast.GetDataAsync(Feature.Hourly, queryType, options).ConfigureAwait(false);
+		}
+
+		public ConditionsResponse GetConditions(QueryType queryType, QueryOptions options = null)
+		{
+			Service<ConditionsResponse> forecast = new Service<ConditionsResponse>(_apiKey, _baseUrl);
+			return forecast.GetData(Feature.Conditions, queryType, options);
+		}
+
+		public async Task<ConditionsResponse> GetConditionsAsync(QueryType queryType, QueryOptions options = null)
+		{
+			Service<ConditionsResponse> forecast = new Service<ConditionsResponse>(_apiKey, _baseUrl);
+			return await forecast.GetDataAsync(Feature.Conditions, queryType, options).ConfigureAwait(false);
+		}
+	}
 }

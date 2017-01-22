@@ -50,19 +50,13 @@
     <Compile Include="Models\Accumulation.cs" />
     <Compile Include="Models\Airport.cs" />
     <Compile Include="Models\Alert.cs" />
-    <Compile Include="Models\AlertData.cs" />
     <Compile Include="Models\Almanac.cs" />
-    <Compile Include="Models\AstronomyData.cs" />
     <Compile Include="Models\MoonPhase.cs" />
     <Compile Include="Models\RecordTemp.cs" />
-    <Compile Include="Models\AlmanacData.cs" />
     <Compile Include="Models\FctTime.cs" />
     <Compile Include="Models\Forecast.cs" />
-    <Compile Include="Models\ForecastData.cs" />
     <Compile Include="Models\ForecastDay.cs" />
     <Compile Include="Models\Hourly.cs" />
-    <Compile Include="Models\HourlyData.cs" />
-    <Compile Include="Models\GeoLookupData.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\NearbyWeatherStations.cs" />
     <Compile Include="Models\PersonalStation.cs" />
@@ -87,9 +81,26 @@
     <Compile Include="Utilities\EpochConverter.cs" />
     <Compile Include="WeatherClient.cs" />
     <Compile Include="Utilities\Validation.cs" />
+    <Compile Include="Models\QueryOptions.cs" />
+    <Compile Include="ResultModels\AlertResponse.cs" />
+    <Compile Include="ResultModels\AstornomyResponse.cs" />
+    <Compile Include="ResultModels\GeoLookupResponse.cs" />
+    <Compile Include="ResultModels\ForecastResponse.cs" />
+    <Compile Include="ResultModels\AlminacResponse.cs" />
+    <Compile Include="ResultModels\HourlyResponse.cs" />
+    <Compile Include="Utilities\UrlBuilder.cs" />
+    <Compile Include="Models\CurrentObservation.cs" />
+    <Compile Include="Models\ObservationLocation.cs" />
+    <Compile Include="Models\DisplayLocation.cs" />
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\Estimated.cs" />
+    <Compile Include="ResultModels\ConditionsResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ResultModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

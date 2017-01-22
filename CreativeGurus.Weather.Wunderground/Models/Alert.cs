@@ -7,11 +7,11 @@ namespace CreativeGurus.Weather.Wunderground.Models
         public string Attribution { get; set; }
         public string Date { get; set; }
         public long Date_Epoch { get; set; }
-        public DateTime Date_EpochDate { get { return Utilities.EpochConverter.FromUnixTime(this.Date_Epoch); } }
+        public DateTime DateEpochDate { get { return Utilities.EpochConverter.FromUnixTime(this.Date_Epoch); } }
         public string Description { get; set; }
         public string Expires { get; set; }
         public long Expires_Epoch { get; set; }
-        public DateTime Expires_EpochDate { get { return Utilities.EpochConverter.FromUnixTime(this.Expires_Epoch); } }
+        public DateTime ExpiresEpochDate { get { return Utilities.EpochConverter.FromUnixTime(this.Expires_Epoch); } }
         public string Level_MeteoAlarm { get; set; }
         public string Level_MeteoAlarm_Description { get; set; }
         public string Level_MeteoAlarm_Name { get; set; }

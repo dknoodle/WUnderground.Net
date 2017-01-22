@@ -1,8 +1,8 @@
 ﻿namespace CreativeGurus.Weather.Wunderground.Models
 {
-    public class AlertData
+    public class AstronomyResponse
     {
-        public Alert[] Alerts { get; set; }
+        public MoonPhase MoonPhase { get; set; }
         public Response Response { get; set; }
     }
 }
