@@ -2,7 +2,7 @@
 
 namespace CreativeGurus.Weather.Wunderground.Models
 {
-    public class ForecastHourly
+    public class Hourly
     {
         public string Condition { get; set; }
         public TemperatureEM Dewpoint { get; set; }
