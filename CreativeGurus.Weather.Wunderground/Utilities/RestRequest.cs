@@ -2,6 +2,7 @@
 using RestSharp;
 using System;
 using System.Threading.Tasks;
+using System.Runtime;
 
 namespace CreativeGurus.Weather.Wunderground.Utilities
 {
@@ -14,6 +15,8 @@ namespace CreativeGurus.Weather.Wunderground.Utilities
             var client = new RestClient();
             client.BaseUrl = uri;
             var response = client.Execute<T>(request);
+
+            if (response.Content.Contains("keynotfound")) { throw new ArgumentException("Invalid API key"); }
 
             if (response.ErrorException != null)
             {
@@ -40,6 +43,8 @@ namespace CreativeGurus.Weather.Wunderground.Utilities
             client.BaseUrl = uri;
 
             var response = await client.ExecuteGetTaskAsync<T>(request).ConfigureAwait(false);
+
+            if (response.Content.Contains("keynotfound")) { throw new ArgumentException("Invalid API key"); }
 
             if (response.ErrorException != null)
             {

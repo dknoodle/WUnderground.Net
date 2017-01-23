@@ -22,7 +22,7 @@ namespace CreativeGurus.Weather.Wunderground
 		internal T GetData(Feature feature, QueryType queryType, QueryOptions options)
 		{
 			string url = UrlBuilder.BuildUrl(_baseUrl, _apiKey, feature, queryType, options);
-			return RestRequest.Execute<T>(new Uri(url));
+            return RestRequest.Execute<T>(new Uri(url));
         }
 
 		internal async Task<T> GetDataAsync(Feature feature, QueryType queryType, QueryOptions options)

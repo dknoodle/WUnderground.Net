@@ -16,10 +16,11 @@ namespace Sample
         {
 			try
 			{
-				//List of supported languages
-				//https://www.wunderground.com/weather/api/d/docs?d=language-support&MR=1
+                //List of supported languages
+                //https://www.wunderground.com/weather/api/d/docs?d=language-support&MR=1
 
-				string key = "{Your API Key Here}";
+                string key = "611649331a9c9e34";
+                //string key = "{Your API Key Here}";
 
 				WeatherClient client = new WeatherClient(key);
 
@@ -60,10 +61,10 @@ namespace Sample
                 //var g8 = client.GetGeoLookup(QueryType.ZipCode, new QueryOptions() { ZipCode = "94107" }); //Gets data by US Zip Code
 
 				//Sample Hourly
-				var h1 = client.GetHourly(QueryType.USCity, new QueryOptions() { City = "Dallas", State = "TX" });
+				//var h1 = client.GetHourly(QueryType.USCity, new QueryOptions() { City = "Dallas", State = "TX" });
 
 				//Sample Conditions
-				var c1 = await client.GetConditionsAsync(QueryType.USCity, new QueryOptions() { City = "Dallas", State = "TX" });
+				//var c1 = await client.GetConditionsAsync(QueryType.USCity, new QueryOptions() { City = "Dallas", State = "TX" });
 
                 return true;
             }
