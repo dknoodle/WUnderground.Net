@@ -50,8 +50,8 @@ client.GetForecast(QueryType.USCity, new QueryOptions() { City = "Los Angeles", 
 //Gets data by US Zip Code
 client.GetForecast(QueryType.ZipCode, new QueryOptions() { ZipCode = "90210" }); 
 
-//Gets Alerts by US City and State Asynchronously
-await client.GetAlertsAsync(QueryType.USCity, new QueryOptions() { City = "Las Angeles", State = "CA" });
+//Gets Alerts by US City Asynchronously
+await client.GetAlertsAsync(QueryType.USCity, new QueryOptions() { City = "Los Angeles", State = "CA" });
 ```
 All methods have both Synchronous and Asynchronous versions
 
