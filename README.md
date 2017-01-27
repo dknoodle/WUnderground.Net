@@ -1,7 +1,7 @@
 Weather Underground .Net API Wrapper (Also Weather.com)
 =====================================================
 
-This library implements the most features of the Wunderground.com Weather API.
+This library implements most features of the Wunderground.com Weather API.
 
 http://www.wunderground.com/weather/api
 
