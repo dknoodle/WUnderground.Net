@@ -65,12 +65,12 @@ namespace Sample
                 //Sample Conditions
                 //var c1 = await client.GetConditionsAsync(QueryType.USCity, new QueryOptions() { City = "Dallas", State = "TX" });
 
-                await client.GetAlertsAsync(QueryType.USCity, new QueryOptions() { City = "Las Angeles", State = "CA" });
+                //await client.GetAlertsAsync(QueryType.USCity, new QueryOptions() { City = "Las Angeles", State = "CA" });
 
 
-                client.GetForecast(QueryType.AutoIp, new QueryOptions() { Language = "FR" };
-                client.GetForecast(QueryType.AutoIp, new QueryOptions() { UsePWS = false };
-                client.GetForecast(QueryType.AutoIp, new QueryOptions() { UseBestFct = false };
+                //client.GetForecast(QueryType.AutoIp, new QueryOptions() { Language = "FR" };
+                //client.GetForecast(QueryType.AutoIp, new QueryOptions() { UsePWS = false };
+                //client.GetForecast(QueryType.AutoIp, new QueryOptions() { UseBestFct = false };
 
                 return true;
             }
