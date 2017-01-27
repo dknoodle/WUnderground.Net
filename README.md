@@ -74,3 +74,5 @@ client.GetForecast(QueryType.AutoIp, new QueryOptions() { UseBestFct = false };
 [Supported Languages](https://www.wunderground.com/weather/api/d/docs?d=language-support&MR=1)
 
 [Best Forecast Documentation](https://www.wunderground.com/about/data)
+
+This library is distributed under an [MIT](https://opensource.org/licenses/MIT) license.
