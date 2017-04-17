@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CreativeGurus.Weather.Wunderground</name>
+    </assembly>
+    <members>
+        <member name="T:CreativeGurus.Weather.Wunderground.Models.QueryType">
+            <summary>
+            QueryTypes to use qhen querying the Weather Underground API
+            </summary>
+        </member>
+        <member name="F:CreativeGurus.Weather.Wunderground.Models.QueryType.AirportCode">
+            <summary>
+            Sets the query type to use an Airport Code.  Must provide AirportCode of the location to query.
+            </summary>
+        </member>
+        <member name="F:CreativeGurus.Weather.Wunderground.Models.QueryType.AutoIp">
+            <summary>
+            Sets the query type to use the IP address of the calling client for location data.
+            </summary>
+        </member>
+        <member name="F:CreativeGurus.Weather.Wunderground.Models.QueryType.GlobalCity">
+            <summary>
+            Sets the query type to be a global (non US) city.  Must provide Country and City of the location to query.
+            </summary>
+        </member>
+        <member name="F:CreativeGurus.Weather.Wunderground.Models.QueryType.GPS">
+            <summary>
+            Sets the query type to use GPS Latitude and Longitude.  Must provide Latitude and Longitude of the location to query.
+            </summary>
+        </member>
+        <member name="F:CreativeGurus.Weather.Wunderground.Models.QueryType.LinkId">
+            <summary>
+            Sets the query type to use a Link ID.  Must provide LinkId of the location to query.
+            </summary>
+        </member>
+        <member name="F:CreativeGurus.Weather.Wunderground.Models.QueryType.PWSId">
+            <summary>
+            Sets the query type to use a PWSId (Personal Weather Station).  Must provide the PWSId of the station to query.
+            </summary>
+        </member>
+        <member name="F:CreativeGurus.Weather.Wunderground.Models.QueryType.USCity">
+            <summary>
+            Sets the query type to use a US City and State.  Must provide the US City and State of the location to query.
+            </summary>
+        </member>
+        <member name="F:CreativeGurus.Weather.Wunderground.Models.QueryType.ZipCode">
+            <summary>
+            Sets the query type to use a US Zip Code.  Must provide the US Zip Code of the location to query.
+            </summary>
+        </member>
+        <member name="T:CreativeGurus.Weather.Wunderground.Models.Feature">
+            <summary>
+            Feature to use when querying the Weather Underground API
+            </summary>
+        </member>
+        <member name="P:CreativeGurus.Weather.Wunderground.QueryOptions.City">
+            <summary>
+            City name to query
+            </summary>
+            <value>The city.</value>
+        </member>
+        <member name="P:CreativeGurus.Weather.Wunderground.QueryOptions.State">
+            <summary>
+            US state name to query
+            </summary>
+            <value>The state.</value>
+        </member>
+        <member name="P:CreativeGurus.Weather.Wunderground.QueryOptions.Country">
+            <summary>
+            Country name to query
+            </summary>
+            <value>The country.</value>
+        </member>
+        <member name="P:CreativeGurus.Weather.Wunderground.QueryOptions.Latitude">
+            <summary>
+            Latitude GPS to query
+            </summary>
+            <value>The latitude.</value>
+        </member>
+        <member name="P:CreativeGurus.Weather.Wunderground.QueryOptions.Longitude">
+            <summary>
+            Longitude GPS to query
+            </summary>
+            <value>The longitude.</value>
+        </member>
+        <member name="P:CreativeGurus.Weather.Wunderground.QueryOptions.Language">
+            <summary>
+            Language to return data in (Default = EN / US English)
+            </summary>
+            <value>The language.</value>
+        </member>
+        <member name="P:CreativeGurus.Weather.Wunderground.QueryOptions.UsePWS">
+            <summary>
+            Indicates if Personal Weather Station data should be returned.  Default = true
+            </summary>
+            <value>The use pws.</value>
+        </member>
+        <member name="P:CreativeGurus.Weather.Wunderground.QueryOptions.UseBestFct">
+            <summary>
+            Use Weather Undergrond Best Forecast for forecast.  Default = true
+            </summary>
+            <value>The use best fct.</value>
+        </member>
+        <member name="P:CreativeGurus.Weather.Wunderground.QueryOptions.IpAddress">
+            <summary>
+            Allows the detected IP address of the client to be overwritten with the provided IP address.
+            </summary>
+            <value>The ip address.</value>
+        </member>
+        <member name="P:CreativeGurus.Weather.Wunderground.QueryOptions.AirportCode">
+            <summary>
+            Airport identifier code to query
+            </summary>
+            <value>The airport code.</value>
+        </member>
+        <member name="P:CreativeGurus.Weather.Wunderground.QueryOptions.LinkId">
+            <summary>
+            Weather Underground Link Id to query.
+            </summary>
+            <value>The link identifier.</value>
+        </member>
+        <member name="P:CreativeGurus.Weather.Wunderground.QueryOptions.ZipCode">
+            <summary>
+            US Zip code to query
+            </summary>
+            <value>The zip code.</value>
+        </member>
+        <member name="P:CreativeGurus.Weather.Wunderground.QueryOptions.PWSId">
+            <summary>
+            Personal Weather Station id to query
+            </summary>
+            <value>The PWSI.</value>
+        </member>
+    </members>
+</doc>

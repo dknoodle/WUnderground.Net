@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{08DA4039-B7D6-46EB-A798-54B99328124C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreativeGurus.Weather.Wunderground", "CreativeGurus.Weather.Wunderground\CreativeGurus.Weather.Wunderground.csproj", "{2DDD94B5-34B1-411F-8122-8D70353C846E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreativeGurus.Weather.Wunderground", "CreativeGurus.Weather.Wunderground\CreativeGurus.Weather.Wunderground.csproj", "{85E94F9B-1CCB-41DF-A4A9-EF43B10AA4E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{08DA4039-B7D6-46EB-A798-54B99328124C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08DA4039-B7D6-46EB-A798-54B99328124C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08DA4039-B7D6-46EB-A798-54B99328124C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2DDD94B5-34B1-411F-8122-8D70353C846E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2DDD94B5-34B1-411F-8122-8D70353C846E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2DDD94B5-34B1-411F-8122-8D70353C846E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2DDD94B5-34B1-411F-8122-8D70353C846E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85E94F9B-1CCB-41DF-A4A9-EF43B10AA4E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85E94F9B-1CCB-41DF-A4A9-EF43B10AA4E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85E94F9B-1CCB-41DF-A4A9-EF43B10AA4E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85E94F9B-1CCB-41DF-A4A9-EF43B10AA4E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

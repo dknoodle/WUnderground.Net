@@ -55,7 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CreativeGurus.Weather.Wunderground\CreativeGurus.Weather.Wunderground.csproj">
-      <Project>{2ddd94b5-34b1-411f-8122-8d70353c846e}</Project>
+      <Project>{85e94f9b-1ccb-41df-a4a9-ef43b10aa4e3}</Project>
       <Name>CreativeGurus.Weather.Wunderground</Name>
     </ProjectReference>
   </ItemGroup>
