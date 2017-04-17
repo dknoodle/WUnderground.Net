@@ -1,8 +1,7 @@
 ﻿using Newtonsoft.Json;
-using RestSharp;
 using System;
+using System.Net.Http;
 using System.Threading.Tasks;
-using System.Runtime;
 
 namespace CreativeGurus.Weather.Wunderground.Utilities
 {
@@ -10,55 +9,36 @@ namespace CreativeGurus.Weather.Wunderground.Utilities
     {
         internal static T Execute<T>(Uri uri) where T : new()
         {
-            IRestRequest request = new RestSharp.RestRequest();
-
-            var client = new RestClient();
-            client.BaseUrl = uri;
-            var response = client.Execute<T>(request);
-
-            if (response.Content.Contains("keynotfound")) { throw new ArgumentException("Invalid API key"); }
-
-            if (response.ErrorException != null)
-            {
-                if (response.Content.Length > 0)
-                {
-                    return JsonConvert.DeserializeObject<T>(response.Content, new BoolConverter(), new DoubleConverter());
-                }
-                else
-                {
-                    throw response.ErrorException;
-                }
-            }
-
-            return response.Data;
+            return Task.Run(async () => await ExecuteAsync<T>(uri).ConfigureAwait(false)).Result;
         }
 
         internal async static Task<T> ExecuteAsync<T>(Uri uri) where T : new()
         {
             T result = new T();
 
-            IRestRequest request = new RestSharp.RestRequest();
+            HttpClient client = new HttpClient();
+            var response = await client.GetAsync(uri).ConfigureAwait(false);
 
-            var client = new RestClient();
-            client.BaseUrl = uri;
+            var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
 
-            var response = await client.ExecuteGetTaskAsync<T>(request).ConfigureAwait(false);
+            if (content.Contains("keynotfound")) { throw new ArgumentException("Invalid API key"); }
 
-            if (response.Content.Contains("keynotfound")) { throw new ArgumentException("Invalid API key"); }
-
-            if (response.ErrorException != null)
+            if (response.IsSuccessStatusCode)
             {
-                if (response.Content.Length > 0)
+                if (content.Length > 0)
                 {
-                    return JsonConvert.DeserializeObject<T>(response.Content, new BoolConverter(), new DoubleConverter());
+                    //return JsonConvert.DeserializeObject<T>(content, new BoolConverter(), new DoubleConverter());
+                    return JsonConvert.DeserializeObject<T>(content, new BoolConverter());
                 }
                 else
                 {
-                    throw response.ErrorException;
+                    throw new HttpRequestException("No data returned");
                 }
             }
-
-            return response.Data;
+            else
+            {
+                throw new HttpRequestException(response.ReasonPhrase);
+            }
         }
     }
 }

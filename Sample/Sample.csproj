@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,10 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CreativeGurus.Weather.Wunderground\CreativeGurus.Weather.Wunderground.csproj">
-      <Project>{2530cf11-eafa-4b60-b151-d0a056c846b2}</Project>
+      <Project>{2ddd94b5-34b1-411f-8122-8d70353c846e}</Project>
       <Name>CreativeGurus.Weather.Wunderground</Name>
     </ProjectReference>
   </ItemGroup>

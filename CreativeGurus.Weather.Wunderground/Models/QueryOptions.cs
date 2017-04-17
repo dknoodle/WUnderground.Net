@@ -3,6 +3,13 @@ namespace CreativeGurus.Weather.Wunderground
 {
 	public class QueryOptions
 	{
+        public QueryOptions()
+        {
+            this.UsePWS = true;
+            this.UseBestFct = true;
+            this.Language = "EN";
+        }
+
 		/// <summary>
 		/// City name to query
 		/// </summary>
@@ -39,17 +46,17 @@ namespace CreativeGurus.Weather.Wunderground
 		/// <value>The language.</value>
 		public string Language { get; set; }
 
-		/// <summary>
-		/// Indicates if Personal Weather Station data should be returned.  Default = true
-		/// </summary>
-		/// <value>The use pws.</value>
-		public bool? UsePWS { get; set; }
+        /// <summary>
+        /// Indicates if Personal Weather Station data should be returned.  Default = true
+        /// </summary>
+        /// <value>The use pws.</value>
+        public bool UsePWS { get; set; }
 
 		/// <summary>
 		/// Use Weather Undergrond Best Forecast for forecast.  Default = true
 		/// </summary>
 		/// <value>The use best fct.</value>
-		public bool? UseBestFct { get; set; }
+		public bool UseBestFct { get; set; }
 
 		/// <summary>
 		/// Allows the detected IP address of the client to be overwritten with the provided IP address.
