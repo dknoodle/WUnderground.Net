@@ -17,7 +17,7 @@ namespace CreativeGurus.Weather.Wunderground.Models
         public Int16? Sec { get; set; }
         public string Tz_Long { get; set; }
         public string Tz_Short { get; set; }
-        public DayOfWeek Weekday { get; set; }
+        public string Weekday { get; set; }
         public string Weekday_Short { get; set; }
         public Int16? YDay { get; set; }
         public Int16? Year { get; set; }
