@@ -6,6 +6,10 @@ namespace CreativeGurus.Weather.Wunderground.Models
     {
         [JsonProperty("moon_phase")]
         public MoonPhase MoonPhase { get; set; }
+
         public Response Response { get; set; }
+
+        [JsonProperty("sun_phase")]
+        public SunPhase sun_phase { get; set; }
     }
 }
