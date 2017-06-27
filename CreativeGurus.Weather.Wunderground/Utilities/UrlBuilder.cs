@@ -10,8 +10,10 @@ namespace CreativeGurus.Weather.Wunderground
         internal static string BuildUrl(string baseUrl, string apiKey, Feature feature, QueryType queryType, QueryOptions options)
         {
             StringBuilder sb = new StringBuilder();
-
-            sb.AppendFormat("{0}/{1}/{2}", baseUrl, apiKey, feature.ToString().ToLower());
+            if (feature != Feature.History)
+                sb.AppendFormat("{0}/{1}/{2}", baseUrl, apiKey, feature.ToString().ToLower());
+            else
+                sb.AppendFormat("{0}/{1}/{2}", baseUrl, apiKey, feature.ToString().ToLower() + "_" + options.HistoryDate.Year.ToString() + options.HistoryDate.Month.ToString() + options.HistoryDate.Day.ToString());
 
             if (!string.IsNullOrWhiteSpace(options?.Language)) { sb.AppendFormat("/lang:{0}", options?.Language); }  //Language
             if (options?.UsePWS == true) { sb.AppendFormat("/pws:{0}", options?.UsePWS); } // Use Personal weather station

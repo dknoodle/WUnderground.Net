@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CreativeGurus.Weather.Wunderground.Models;
+using System;
 namespace CreativeGurus.Weather.Wunderground
 {
 	public class QueryOptions
@@ -87,5 +88,11 @@ namespace CreativeGurus.Weather.Wunderground
 		/// </summary>
 		/// <value>The PWSI.</value>
 		public string PWSId { get; set; }
-	}
+
+        /// <summary>
+		/// Date for the history request
+		/// </summary>
+		/// <value>The date</value>
+		public HistoryDate HistoryDate { get; set; }
+    }
 }
