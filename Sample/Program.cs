@@ -19,7 +19,7 @@ namespace Sample
                 //List of supported languages
                 //https://www.wunderground.com/weather/api/d/docs?d=language-support&MR=1
 
-                string key = "{Your API Key Here}";
+                string key = "{Insert your key here}";
 
                 WeatherClient client = new WeatherClient(key);
 
@@ -48,6 +48,17 @@ namespace Sample
                 //var f6 = client.GetForecast(QueryType.PWSId, new QueryOptions() { PWSId = "KMNCHASK10" }); //Gets data from a personal weather station by ID
                 //var f7 = client.GetForecast(QueryType.USCity, new QueryOptions() { City = "Dallas", State = "TX" }); //Gets data for a US City
                 //var f8 = client.GetForecast(QueryType.ZipCode, new QueryOptions() { ZipCode = "94107" }); //Gets data by US Zip Code
+
+                //Sample History
+                //var h1 = client.GetHistory(QueryType.AirportCode, new QueryOptions() { AirportCode = "DFW", HistoryDate = new HistoryDate(2017, 06, 25) });  //Gets data by Airport Code
+                //var h2 = client.GetHistory(QueryType.AutoIp, new QueryOptions() { HistoryDate = new HistoryDate(2017, 06, 25) });  //Gets data by the detected IP address of the calling client
+                //var h3 = client.GetHistory(QueryType.GlobalCity, new QueryOptions() { Country = "France", City = "Paris", HistoryDate = new HistoryDate(2017, 06, 25) }); //Gets data by country and city
+                //var h4 = client.GetHistory(QueryType.GPS, new QueryOptions() { Latitude = "37.776289", Longitude = "-122.395234", HistoryDate = new HistoryDate(2017, 06, 25) }); //Gets data by GPS coordinates
+                //var h5 = client.GetHistory(QueryType.LinkId, new QueryOptions() { LinkId = "00000.1.16172", HistoryDate = new HistoryDate(2017, 06, 25) }); //Gets data by Weather Underground Link ID
+                //var h6 = client.GetHistory(QueryType.PWSId, new QueryOptions() { PWSId = "KMNCHASK10", HistoryDate = new HistoryDate(2017, 06, 25) }); //Gets data from a personal weather station by ID
+                //var h7 = client.GetHistory(QueryType.USCity, new QueryOptions() { City = "Dallas", State = "TX", HistoryDate = new HistoryDate(2017, 06, 25) }); //Gets data for a US City
+                //var h8 = client.GetHistory(QueryType.ZipCode, new QueryOptions() { ZipCode = "94107", HistoryDate = new HistoryDate(2017, 06, 25) }); //Gets data by US Zip Code
+
 
                 //Sample GeoLookups
                 //var g1 = client.GetGeoLookup(QueryType.AirportCode, new QueryOptions() { AirportCode = "DFW" });  //Gets data by Airport Code

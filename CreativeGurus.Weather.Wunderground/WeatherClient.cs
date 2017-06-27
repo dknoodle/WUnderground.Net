@@ -74,6 +74,18 @@ namespace CreativeGurus.Weather.Wunderground
             return await forecast.GetDataAsync(Feature.Forecast, queryType, options).ConfigureAwait(false);
         }
 
+        public HistoryResponse GetHistory(QueryType queryType, QueryOptions options = null)
+        {
+            Service<HistoryResponse> history = new Service<HistoryResponse>(_apiKey, _baseUrl);
+            return history.GetData(Feature.History, queryType, options);
+        }
+
+        public async Task<HistoryResponse> GetHistoryAsync(QueryType queryType, QueryOptions options = null)
+        {
+            Service<HistoryResponse> history = new Service<HistoryResponse>(_apiKey, _baseUrl);
+            return await history.GetDataAsync(Feature.Forecast, queryType, options).ConfigureAwait(false);
+        }
+
         public GeoLookupResponse GetGeoLookup(QueryType queryType, QueryOptions options = null)
         {
             Service<GeoLookupResponse> forecast = new Service<GeoLookupResponse>(_apiKey, _baseUrl);
