@@ -35,7 +35,6 @@ http://www.wunderground.com/weather/api</Description>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-    <PackageReference Include="NuGet.Build.Tasks.Pack" Version="4.0.0" />
   </ItemGroup>
 
   <ItemGroup>
