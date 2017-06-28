@@ -1,6 +1,7 @@
 ﻿using CreativeGurus.Weather.Wunderground.Models;
 
 using System.Threading.Tasks;
+using System;
 
 namespace CreativeGurus.Weather.Wunderground
 {
@@ -109,5 +110,29 @@ namespace CreativeGurus.Weather.Wunderground
             Service<HourlyResponse> forecast = new Service<HourlyResponse>(_apiKey, _baseUrl);
             return await forecast.GetDataAsync(Feature.Hourly, queryType, options).ConfigureAwait(false);
         }
+
+		public ForecastResponse GetForecast10Day(QueryType queryType, QueryOptions options = null)
+		{
+			Service<ForecastResponse> forecast = new Service<ForecastResponse>(_apiKey, _baseUrl);
+			return forecast.GetData(Feature.Forecast10Day, queryType, options);
+		}
+
+        public async Task<ForecastResponse> GetForecast10DayAsync(QueryType queryType, QueryOptions options = null)
+        {
+            Service<ForecastResponse> forecast = new Service<ForecastResponse>(_apiKey, _baseUrl);
+            return await forecast.GetDataAsync(Feature.Forecast10Day, queryType, options);
+        }
+
+		public HistoryResponse GetHistory(QueryType queryType, QueryOptions options = null)
+		{
+			Service<HistoryResponse> forecast = new Service<HistoryResponse>(_apiKey, _baseUrl);
+			return forecast.GetData(Feature.History, queryType, options);
+		}
+
+		public async Task<HistoryResponse> GetHistoryAsync(QueryType queryType, QueryOptions options = null)
+		{
+			Service<HistoryResponse> forecast = new Service<HistoryResponse>(_apiKey, _baseUrl);
+			return await forecast.GetDataAsync(Feature.History, queryType, options);
+		}
     }
 }

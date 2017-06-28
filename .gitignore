@@ -157,3 +157,4 @@ cv/.vs/config/applicationhost.config
 /cv/CV.Web/TempFiles
 /cv/CV.Web/App_Data
 cv/cv.tss
+*.userprefs

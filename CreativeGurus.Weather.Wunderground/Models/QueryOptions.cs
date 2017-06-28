@@ -29,6 +29,12 @@ namespace CreativeGurus.Weather.Wunderground
 		public string Country { get; set; }
 
 		/// <summary>
+		/// Date to use for History queries
+		/// </summary>
+		/// <value>The PWSI.</value>
+		public DateTime? Date { get; set; }
+
+		/// <summary>
 		/// Latitude GPS to query
 		/// </summary>
 		/// <value>The latitude.</value>
@@ -59,7 +65,7 @@ namespace CreativeGurus.Weather.Wunderground
 		public bool UseBestFct { get; set; }
 
 		/// <summary>
-		/// Allows the detected IP address of the client to be overwritten with the provided IP address.
+		/// Allows the detected IP address of the client to be overwritten with the provided IP address
 		/// </summary>
 		/// <value>The ip address.</value>
 		public string IpAddress { get; set; }
@@ -71,7 +77,7 @@ namespace CreativeGurus.Weather.Wunderground
 		public string AirportCode { get; set; }
 
 		/// <summary>
-		/// Weather Underground Link Id to query.
+		/// Weather Underground Link Id to query
 		/// </summary>
 		/// <value>The link identifier.</value>
 		public string LinkId { get; set; }

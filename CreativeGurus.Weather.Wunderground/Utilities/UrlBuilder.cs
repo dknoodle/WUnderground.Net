@@ -11,7 +11,23 @@ namespace CreativeGurus.Weather.Wunderground
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendFormat("{0}/{1}/{2}", baseUrl, apiKey, feature.ToString().ToLower());
+            if (feature == Feature.History)
+            {
+                if (options.Date == null) {throw new ArgumentException("Date must be supplied when querying for History"); }
+
+                string year = options.Date.Value.Year.ToString();
+                string month = options.Date.Value.Month.ToString();
+                string day = options.Date.Value.Day.ToString();
+
+                if (month.Length == 1) { month = $"0{month}"; }
+                if (day.Length == 1) { day = $"0{day}"; }
+
+                sb.AppendFormat("{0}/{1}/{2}", baseUrl, apiKey, $"{feature.ToString().ToLower()}_{year}{month}{day}");
+            }
+            else
+            {
+                sb.AppendFormat("{0}/{1}/{2}", baseUrl, apiKey, feature.ToString().ToLower());
+            }
 
             if (!string.IsNullOrWhiteSpace(options?.Language)) { sb.AppendFormat("/lang:{0}", options?.Language); }  //Language
             if (options?.UsePWS == true) { sb.AppendFormat("/pws:{0}", options?.UsePWS); } // Use Personal weather station
