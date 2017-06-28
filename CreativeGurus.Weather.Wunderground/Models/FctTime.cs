@@ -59,7 +59,7 @@ namespace CreativeGurus.Weather.Wunderground.Models
 		public string MonthNameAbbrev { get; set; }
 
 		[JsonProperty("weekday_name")]
-		public DayOfWeek WeekdayName { get; set; }
+		public string WeekdayName { get; set; }
 
 		[JsonProperty("weekday_name_night")]
 		public string WeekdayNameNight { get; set; }
@@ -83,6 +83,6 @@ namespace CreativeGurus.Weather.Wunderground.Models
 		public string Age { get; set; }
 
 		[JsonProperty("UTCDATE")]
-		public string UTCDATE { get; set; }
+		public string UTCDate { get; set; }
 	}
 }
