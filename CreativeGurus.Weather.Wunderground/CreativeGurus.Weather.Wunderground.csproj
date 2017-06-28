@@ -19,6 +19,8 @@ http://www.wunderground.com/weather/api</Description>
     <AssemblyVersion>2.0.5.0</AssemblyVersion>
     <FileVersion>2.0.5.0</FileVersion>
     <PackOnBuild>true</PackOnBuild>
+    <ReleaseVersion>2.0.6</ReleaseVersion>
+    <PackageVersion>2.0.6</PackageVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

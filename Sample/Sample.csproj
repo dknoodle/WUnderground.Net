@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <ReleaseVersion>2.0.6</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CreativeGurus.Weather.Wunderground\CreativeGurus.Weather.Wunderground.csproj">
-      <Project>{85e94f9b-1ccb-41df-a4a9-ef43b10aa4e3}</Project>
+      <Project>{C102B891-C68B-478D-9120-C31219EDD9E7}</Project>
       <Name>CreativeGurus.Weather.Wunderground</Name>
     </ProjectReference>
   </ItemGroup>
