@@ -1,20 +1,23 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace CreativeGurus.Weather.Wunderground.Models
 {
-	public class Response
-	{
-		[JsonProperty("version")]
-		public string Version { get; set; }
+    public class Response
+    {
+        [JsonProperty("error")]
+        public Dictionary<string, string> Error { get; set; }
 
-		[JsonProperty("termsofService")]
-		public string TermsofService { get; set; }
+        [JsonProperty("features")]
+        public Dictionary<string, string> Features { get; set; }
 
-		[JsonProperty("features")]
-		public Dictionary<string, string> Features { get; set; }
+        [JsonProperty("results")]
+        public ResultLocation[] Results { get; set; }
 
-		[JsonProperty("error")]
-		public Dictionary<string, string> Error { get; set; }
-	}
+        [JsonProperty("termsofService")]
+        public string TermsofService { get; set; }
+
+        [JsonProperty("version")]
+        public string Version { get; set; }
+    }
 }
