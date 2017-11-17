@@ -158,3 +158,7 @@ cv/.vs/config/applicationhost.config
 /cv/CV.Web/App_Data
 cv/cv.tss
 *.userprefs
+.vs/Wunderground.Net/v15/Server/sqlite3/storage.ide-wal
+.vs/Wunderground.Net/v15/Server/sqlite3/storage.ide-shm
+.vs/Wunderground.Net/v15/Server/sqlite3/storage.ide
+.vs/Wunderground.Net/v15/Server/sqlite3/db.lock
