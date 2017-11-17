@@ -22,6 +22,7 @@ namespace CreativeGurus.Weather.Wunderground
                 return _useSSL ? "https://api.wunderground.com/api" : "http://api.wunderground.com/api";
             }
         }
+
         public AlertResponse GetAlerts(QueryType queryType, QueryOptions options = null)
         {
             Service<AlertResponse> forecast = new Service<AlertResponse>(_apiKey, _baseUrl);

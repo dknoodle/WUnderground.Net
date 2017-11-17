@@ -9,7 +9,7 @@
     <Company>Creative Gurus, LLC</Company>
     <Description>Weather Underground .Net API (Also Weather.com)
 
-.Net Wrapper library for the Wunderground.com Weather API
+.Net Standard Wrapper library for the Wunderground.com Weather API
 
 http://www.wunderground.com/weather/api</Description>
     <Product>WUnderground.Net</Product>
