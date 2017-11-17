@@ -158,3 +158,4 @@ cv/.vs/config/applicationhost.config
 /cv/CV.Web/App_Data
 cv/cv.tss
 *.userprefs
+/.vs/Wunderground.Net/v15/Server/sqlite3

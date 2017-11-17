@@ -3,6 +3,7 @@ using CreativeGurus.Weather.Wunderground.Models;
 using System;
 using System.Threading.Tasks;
 using System.Runtime;
+using System.Linq;
 
 namespace Sample
 {
@@ -23,6 +24,14 @@ namespace Sample
                 string key = "{Your API Key Here}";
 
                 WeatherClient client = new WeatherClient(key);
+
+                // Sample results for edge cases - queries which return multiple results
+                //var z1 = client.GetConditions(QueryType.GlobalCity, new QueryOptions { City = "Belfast", Country = "UK" });
+                //if (z1.CurrentObservation == null && z1.Response.Results.Count() > 0)
+                //{
+                //    var firstResult = z1.Response.Results.FirstOrDefault();
+                //    var z2 = client.GetConditions(QueryType.LinkId, new QueryOptions { LinkId = firstResult?.ZMW });
+                //}
 
                 //Sample Alerts
                 //var a1 = client.GetAlerts(QueryType.AirportCode, new QueryOptions() { AirportCode = "DFW" });  //Gets data by Airport Code
