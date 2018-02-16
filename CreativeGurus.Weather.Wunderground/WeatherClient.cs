@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 
 namespace CreativeGurus.Weather.Wunderground
 {
-    public class WeatherClient
-    {
+    public class WeatherClient : IWeatherClient
+	{
         private string _apiKey;
         private bool _useSSL;
 
@@ -14,7 +14,7 @@ namespace CreativeGurus.Weather.Wunderground
             _apiKey = apiKey;
             _useSSL = useSSL;
         }
-
+		
         private string _baseUrl
         {
             get
