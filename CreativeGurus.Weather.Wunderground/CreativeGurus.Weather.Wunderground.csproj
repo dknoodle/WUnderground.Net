@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.1</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.0.6</Version>
+    <Version>2.0.7</Version>
     <PackageId>WUnderground.Net</PackageId>
     <Authors>Daniel Knoodle</Authors>
     <Company>Creative Gurus, LLC</Company>
@@ -16,8 +16,8 @@ http://www.wunderground.com/weather/api</Description>
     <PackageTags>weather weatherunderground weather.com wunderground.com</PackageTags>
     <PackageProjectUrl>https://github.com/dknoodle/WUnderground.Net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dknoodle/WUnderground.Net</RepositoryUrl>
-    <AssemblyVersion>2.0.6.0</AssemblyVersion>
-    <FileVersion>2.0.6.0</FileVersion>
+    <AssemblyVersion>2.0.7.0</AssemblyVersion>
+    <FileVersion>2.0.7.0</FileVersion>
     <PackOnBuild>true</PackOnBuild>
     <ReleaseVersion>2.0.6</ReleaseVersion>
     <PackageVersion>2.0.6</PackageVersion>
