@@ -14,8 +14,6 @@ namespace CreativeGurus.Weather.Wunderground.Utilities
 
 		internal static async Task<T> ExecuteAsync<T>(Uri uri) where T : new()
 		{
-			T result = new T();
-
 			HttpClient client = new HttpClient();
 			var response = await client.GetAsync(uri).ConfigureAwait(false);
 
