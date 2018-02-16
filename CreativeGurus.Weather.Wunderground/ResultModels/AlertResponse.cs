@@ -1,8 +1,10 @@
-﻿namespace CreativeGurus.Weather.Wunderground.Models
+﻿using CreativeGurus.Weather.Wunderground.Models;
+
+namespace CreativeGurus.Weather.Wunderground.ResultModels
 {
     public class AlertResponse
     {
-        public Models.Alert[] Alerts { get; set; }
-        public Models.Response Response { get; set; }
+        public Alert[] Alerts { get; set; }
+        public Response Response { get; set; }
     }
 }

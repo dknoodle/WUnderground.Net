@@ -2,7 +2,7 @@
 using CreativeGurus.Weather.Wunderground.Models;
 using System;
 using System.Threading.Tasks;
-using System.Runtime;
+using CreativeGurus.Weather.Wunderground.ResultModels;
 
 namespace Sample
 {
@@ -68,7 +68,6 @@ namespace Sample
 
                 //await client.GetAlertsAsync(QueryType.USCity, new QueryOptions() { City = "Las Angeles", State = "CA" });
 
-
                 //client.GetForecast(QueryType.AutoIp, new QueryOptions() { Language = "FR" };
                 //client.GetForecast(QueryType.AutoIp, new QueryOptions() { UsePWS = false };
                 //client.GetForecast(QueryType.AutoIp, new QueryOptions() { UseBestFct = false };
@@ -77,7 +76,7 @@ namespace Sample
                 //var f10day = await client.GetForecast10DayAsync(QueryType.USCity, new QueryOptions() { City = "Dallas", State = "TX" });
 
                 //Sample History
-                var history = await client.GetHistoryAsync(QueryType.USCity, new QueryOptions() { City = "Dallas", State = "TX", Date = DateTime.Now.AddDays(-20), });
+                HistoryResponse history = await client.GetHistoryAsync(QueryType.USCity, new QueryOptions() { City = "Dallas", State = "TX", Date = DateTime.Now.AddDays(-20), });
 
                 return true;
             }

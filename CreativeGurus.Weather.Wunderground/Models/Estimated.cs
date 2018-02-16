@@ -1,10 +1,9 @@
-﻿using System;
-namespace CreativeGurus.Weather.Wunderground
+﻿namespace CreativeGurus.Weather.Wunderground
 {
-	public class Estimated
-	{
-		public Estimated()
-		{
-		}
-	}
+    public class Estimated
+    {
+        public Estimated()
+        {
+        }
+    }
 }

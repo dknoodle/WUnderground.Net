@@ -4,16 +4,16 @@ namespace CreativeGurus.Weather.Wunderground.Models
 {
     public class Wind
     {
-		[JsonProperty("dir")]
-		public string Dir { get; set; }
+        [JsonProperty("dir")]
+        public string Dir { get; set; }
 
-		[JsonProperty("degrees")]
-		public double? Degrees { get; set; }
+        [JsonProperty("degrees")]
+        public double? Degrees { get; set; }
 
-		[JsonProperty("kph")]
+        [JsonProperty("kph")]
         public double? Kph { get; set; }
 
-		[JsonProperty("mph")]
+        [JsonProperty("mph")]
         public double? Mph { get; set; }
     }
 }

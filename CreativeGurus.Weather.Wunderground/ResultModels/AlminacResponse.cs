@@ -1,8 +1,10 @@
-﻿namespace CreativeGurus.Weather.Wunderground.Models
+﻿using CreativeGurus.Weather.Wunderground.Models;
+
+namespace CreativeGurus.Weather.Wunderground.ResultModels
 {
     public class AlmanacResponse
     {
-        public Models.Almanac Almanac { get; set; }
-        public Models.Response Response { get; set; }
+        public Almanac Almanac { get; set; }
+        public Response Response { get; set; }
     }
 }

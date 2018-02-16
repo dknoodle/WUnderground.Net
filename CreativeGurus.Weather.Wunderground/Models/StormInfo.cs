@@ -1,9 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CreativeGurus.Weather.Wunderground.Models
 {
@@ -21,7 +17,7 @@ namespace CreativeGurus.Weather.Wunderground.Models
         [JsonProperty("time_epoch")]
         public long TimeEpoch { get; set; }
 
-        public DateTime TimeEpochDate { get { return Utilities.EpochConverter.FromUnixTime(this.TimeEpoch); } }
+        public DateTime TimeEpochDate { get { return Utilities.EpochConverter.FromUnixTime(TimeEpoch); } }
 
         [JsonProperty("Motion_deg")]
         public int MotionDeg { get; set; }

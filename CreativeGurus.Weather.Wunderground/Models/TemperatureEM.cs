@@ -2,12 +2,12 @@
 
 namespace CreativeGurus.Weather.Wunderground.Models
 {
-	public class TemperatureEM
-	{
-		[JsonProperty("english")]
-		public double English { get; set; }
+    public class TemperatureEM
+    {
+        [JsonProperty("english")]
+        public double English { get; set; }
 
-		[JsonProperty("metric")]
-		public double Metric { get; set; }
-	}
+        [JsonProperty("metric")]
+        public double Metric { get; set; }
+    }
 }

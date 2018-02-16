@@ -1,6 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using CreativeGurus.Weather.Wunderground.Models;
+using Newtonsoft.Json;
 
-namespace CreativeGurus.Weather.Wunderground.Models
+namespace CreativeGurus.Weather.Wunderground.ResultModels
 {
     public class AstronomyResponse
     {

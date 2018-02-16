@@ -1,9 +1,8 @@
-﻿using CreativeGurus.Weather.Wunderground.Models;
-using CreativeGurus.Weather.Wunderground.Utilities;
-using System;
+﻿using System;
 using System.Text;
+using CreativeGurus.Weather.Wunderground.Models;
 
-namespace CreativeGurus.Weather.Wunderground
+namespace CreativeGurus.Weather.Wunderground.Utilities
 {
     internal static class UrlBuilder
     {
@@ -13,7 +12,7 @@ namespace CreativeGurus.Weather.Wunderground
 
             if (feature == Feature.History)
             {
-                if (options.Date == null) {throw new ArgumentException("Date must be supplied when querying for History"); }
+                if (options.Date == null) { throw new ArgumentException("Date must be supplied when querying for History"); }
 
                 string year = options.Date.Value.Year.ToString();
                 string month = options.Date.Value.Month.ToString();

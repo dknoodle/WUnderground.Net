@@ -4,7 +4,6 @@ namespace CreativeGurus.Weather.Wunderground.Models
 {
     public class Vertex
     {
-
         [JsonProperty("lat")]
         public string Lat { get; set; }
 

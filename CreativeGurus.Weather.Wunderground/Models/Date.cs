@@ -6,7 +6,7 @@ namespace CreativeGurus.Weather.Wunderground.Models
     {
         public AMPM AmPm { get; set; }
         public Int16? Day { get; set; }
-        public DateTime EpochDate { get { return Utilities.EpochConverter.FromUnixTime(this.Epoch); } }
+        public DateTime EpochDate { get { return Utilities.EpochConverter.FromUnixTime(Epoch); } }
         public long Epoch { get; set; }
         public Int16? Hour { get; set; }
         public bool IsDst { get; set; }

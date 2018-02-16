@@ -18,7 +18,7 @@ namespace CreativeGurus.Weather.Wunderground.Models
         [JsonProperty("date_epoch")]
         public long? DateEpoch { get; set; }
 
-        public DateTime DateEpochDate { get { return DateEpoch.HasValue ? Utilities.EpochConverter.FromUnixTime(this.DateEpoch.Value) : new DateTime(); } }
+        public DateTime DateEpochDate => DateEpoch.HasValue ? Utilities.EpochConverter.FromUnixTime(DateEpoch.Value) : new DateTime();
 
         [JsonProperty("expires")]
         public string Expires { get; set; }
@@ -26,7 +26,7 @@ namespace CreativeGurus.Weather.Wunderground.Models
         [JsonProperty("expires_epoch")]
         public long? ExpiresEpoch { get; set; }
 
-        public DateTime ExpiresEpochDate { get { return ExpiresEpoch.HasValue?  Utilities.EpochConverter.FromUnixTime(this.ExpiresEpoch.Value) : new DateTime(); } }
+        public DateTime ExpiresEpochDate => ExpiresEpoch.HasValue ? Utilities.EpochConverter.FromUnixTime(ExpiresEpoch.Value) : new DateTime();
 
         [JsonProperty("message")]
         public string Message { get; set; }

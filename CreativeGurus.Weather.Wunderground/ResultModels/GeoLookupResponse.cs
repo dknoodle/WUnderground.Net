@@ -1,4 +1,6 @@
-﻿namespace CreativeGurus.Weather.Wunderground.Models
+﻿using CreativeGurus.Weather.Wunderground.Models;
+
+namespace CreativeGurus.Weather.Wunderground.ResultModels
 {
     public class GeoLookupResponse
     {

@@ -1,15 +1,9 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CreativeGurus.Weather.Wunderground.Models
 {
     public class WindSpeed
     {
-
         [JsonProperty("Kts")]
         public int Kts { get; set; }
 
@@ -19,5 +13,4 @@ namespace CreativeGurus.Weather.Wunderground.Models
         [JsonProperty("Kph")]
         public int Kph { get; set; }
     }
-
 }
